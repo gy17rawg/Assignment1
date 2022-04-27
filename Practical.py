@@ -13,6 +13,8 @@ import csv
 import sys
 import matplotlib.animation
 import tkinter
+
+import matplotlib.pyplot as plt
 import requests
 import bs4
 
@@ -78,9 +80,8 @@ model_menu.add_command(label="Run Model", command=Run)  # Calls run function (De
 environment = []
 
 f = open("in.csv", newline='')
-reader = csv.reader(f,
-                    quoting=csv.QUOTE_NONNUMERIC)  # Can use delimiter= if delimiter isnt a comma. Nonnumeric converts
-                                                    # number to float
+reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)  # Can use delimiter= if delimiter isnt a comma. Nonnumeric converts
+                                                      # number to float
 for row in reader:  # a list of rows
     rowlist = []  # Blank list for the reading of each row (y direction)
     for value in row:  # a list of values, x direction
@@ -108,8 +109,7 @@ newagents = []  # A list for created agents
 for i in range(num_agents):  # Loop until reaches number of agents. Appends to list as a list as y then x
     y = int(td_ys[i].text)
     x = int(td_xs[i].text)
-    agents.append(agentframework.Agent(environment, agents, y,
-                                       x))  # Assigns random agents determined in the class to the agents list
+    agents.append(agentframework.Agent(environment, agents, y, x))  # Assigns random agents determined in the class to the agents list
     # ^^ Also passes environment list into agent's constructor
     # ^^ Now passes in the list of agents - to get their x you use agents[3].x (if you want the x of agent 3)
 
@@ -142,7 +142,7 @@ def Update(frame_number):
         carry_on = False
         print("Stopping condition met")  # Stops program if a random number is less than 0.1
 
-    # Showing environment background first and creates animation plot - ensures the environment isnt loaded for each
+    # Showing environment background first and creates animation plot - ensures the environment isn't loaded for each
     # iteration hence faster
     matplotlib.pyplot.xlim(0, len(environment[0]))
     matplotlib.pyplot.ylim(0, len(environment))
@@ -172,6 +172,8 @@ def gen_function(b=[0]):
                                                 # carry_on hasn't been set to false
         yield a  # Returns control and waits next call.
         a = a + 1
+    plt.savefig('Final_Plot.pdf')  # EXTRA: Saves final plot when program ends
+    print("Program complete. Files Saved. PDF Output to source folder.")
 
 
 # This section opens a csv to write the new environment to
