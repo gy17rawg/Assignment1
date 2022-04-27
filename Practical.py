@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan 25 12:23:25 2022
-
+'''This is the main python file to run the program. It pulls files from the source folder and online and writes to an
+export file. It sets up agents, iterations and neighbourhoods based on the command line inputs and creates the GUI. It
+calls the functions to eat, move and interact from the agentframework during each iteration and determines if new agents
+are to be created. Version 1.0. MIT Licenced''
 @author: rorygrindey
 """
 import matplotlib
@@ -13,11 +16,9 @@ import csv
 import sys
 import matplotlib.animation
 import tkinter
-
 import matplotlib.pyplot as plt
 import requests
 import bs4
-
 matplotlib.use('TkAgg')
 
 # This section imports x and y values for the agents from a website
@@ -111,7 +112,7 @@ for i in range(num_agents):  # Loop until reaches number of agents. Appends to l
     y = int(td_ys[i].text)
     x = int(td_xs[i].text)
     agents.append(agentframework.Agent(environment, agents, y, x))
-    # Assigns random agents determined in the class to the agents list
+    # Assigns agents determined in the class to the agents list
     # ^^ Also passes environment list into agent's constructor
     # ^^ Now passes in the list of agents - to get their x you use agents[3].x (if you want the x of agent 3)
 

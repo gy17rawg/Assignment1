@@ -27,7 +27,7 @@ class Agent():
 
         if y is None:  # Only assigns a random y if the agent hasn't been assigned one from the online list
             self.y = random.randint(0, 299)  # Assigns a random y between 0 and 299 (This uses the entire environment)
-            print("Random Used y")
+            print("Random Used Y")
 
         else:
 
@@ -80,8 +80,9 @@ class Agent():
 # Method/function to search for close neighbours and share resources with them. Also calls function to work out distance to other agents
 
     def share_with_neighbours(self, neighbourhood):
-        for agent in self.agents:
+        for agent in self.agents:  # Compares itself to every other agent. Each iteration this is called is a new agent
             distance = self.distance_between(agent)
+            # print(distance)
             if distance <= neighbourhood:  # Only communicate if the sheep is within the neighbourhood set
                 sum = self.store + agent.store  # Combine stores of self and 3rd party agent
                 ave = sum / 2  # Get average of stores
@@ -91,6 +92,8 @@ class Agent():
 
                 # EXTRA: Conditions for creating a new agent are a storage over 75 and a distance to the other agent below 10
                 # Also resets store of each to 0
+
+                # print(ave)
 
                 if ave > 75 and distance < 10:
                     self.store = 0
