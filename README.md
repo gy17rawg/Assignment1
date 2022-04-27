@@ -8,12 +8,12 @@ The program is run through command prompt (PC) or terminal (Mac). It should be n
 
 # CONTENTS
 
-Licence - This program is licenced with an MIT licence and can be accessed in the GitHub library
-Practical.py - The main model file where the lists are set up, libraries imported, GUI created, files imported and exported and animation controlled/created
-README.md
-agentframework.py - This framework is where the agents are set up alongside functions for moving, eating and sharing resources (in reality, sharing the eaten environment)
-environment.csv - The environment output after eating, values 0 to 255
-in.csv - The environment input with values from 0 to 255
+- Licence - This program is licenced with an MIT licence and can be accessed in the GitHub library
+- Practical.py - The main model file where the lists are set up, libraries imported, GUI created, files imported and exported and animation controlled/created
+- README.md
+- agentframework.py - This framework is where the agents are set up alongside functions for moving, eating and sharing resources (in reality, sharing the eaten environment)
+- environment.csv - The environment output after eating, values 0 to 255
+- in.csv - The environment input with values from 0 to 255
 
 # RUNNING THE PROGRAM & EXPECTATIONS
 
