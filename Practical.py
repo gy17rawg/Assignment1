@@ -105,8 +105,7 @@ agents = []  # Setting up the agent list
 for i in range(num_agents):  # Loop until reaches number of agents. Appends to list as a list as y then x
     y = int(td_ys[i].text)
     x = int(td_xs[i].text)
-    agents.append(agentframework.Agent(environment, agents, y,
-                                       x))  # Assigns random agents determined in the class to the agents list
+    agents.append(agentframework.Agent(environment, agents, y,x))  # Assigns random agents determined in the class to the agents list
     # ^^ Also passes environment list into agent's constructor
     # ^^ Now passes in the list of agents - to get their x you use agents[3].x (if you want the x of agent 3)
 
