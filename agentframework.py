@@ -13,16 +13,16 @@ import random
 class Agent():
     def __init__(self, environment,agents, y, x): #Creation of agents, bringing in environment list
         
-        if (x==None):
-                self.x = random.randint(0,99)
+        if (x==None): #Only assigns a random x if the agent hasn't been assigned one from the online list (if there are more agents than values)
+                self.x = random.randint(0,299) #Assigns a random x between 0 and 299 (This uses the entire environment)
                 print("Random Used x")
                 
         else:
                 
             self.x = x
         
-        if (y==None):
-                self.y = random.randint(0,99)
+        if (y==None): #Only assigns a random y if the agent hasn't been assigned one from the online list
+                self.y = random.randint(0,299) #Assigns a random y between 0 and 299 (This uses the entire environment)
                 print("Random Used y")
                 
         else:
@@ -38,20 +38,20 @@ class Agent():
         
         if random.random() < 0.5:
             
-            self.y = (self.y + 1) % 100 #remainder means they move over the plot like a donut
+            self.y = (self.y + 1) % 300 #remainder means they move over the plot like a donut
             
         else:
             
-            self.y = (self.y - 1) % 100 #Change 100 based on axis size
+            self.y = (self.y - 1) % 300 #Change 100 based on axis size
             
             
         if random.random() < 0.5:
             
-            self.x = (self.x + 1) % 100
+            self.x = (self.x + 1) % 300
             
         else:
             
-            self.x = (self.x - 1) % 100
+            self.x = (self.x - 1) % 300
             
         
         #matplotlib.pyplot.scatter(self.x,self.y)
