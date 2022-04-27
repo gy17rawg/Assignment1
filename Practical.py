@@ -129,7 +129,7 @@ def Update(frame_number):
         agents[i].eat()  # Sheep eat the environment
 
         # Sharing function and this is the creation of new agents (Extra) but it does so anywhere in the environment
-        # and draws them on:
+        # and draws them on (EXTRA):
 
         if agents[i].share_with_neighbours(neighbourhood) is True:
             x = random.randint(0, 299)

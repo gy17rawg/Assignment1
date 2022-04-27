@@ -89,7 +89,7 @@ class Agent():
                 agent.store = ave
                 # print("Sharing | Distance: " + str(distance) + " Average: " + str(ave))
 
-                # Conditions for creating a new agent are a storage over 75 and a distance to the other agent below 10
+                # EXTRA: Conditions for creating a new agent are a storage over 75 and a distance to the other agent below 10
                 # Also resets store of each to 0
 
                 if ave > 75 and distance < 10:
