@@ -31,6 +31,7 @@ in.csv - The environment input with values from 0 to 255
 
 - The model can only be run once before having to be closed and reopened due to the generator function being exhausted (Hence disabling of Run Model on menu)
 - There is no use for the environment output - it could easily be used as an input in further models
+- New agents can't currently move/eat/share with neighbours
 
 # WEBSITE
 
