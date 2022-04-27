@@ -2,7 +2,7 @@
 
 # BACKGROUND
 
-This assignment is designed to intoduce the Python programming language by building a model through various weeks of development and increasing complexity. The idea is that there is a user interface created with TKinter, an imported environment (environment.csv) which is displayed using matplotlib and then animated showing the agents (a simple way to imagine them is sheep) moveing and eating/nibbling their way across the environment. The final environment after the number of chosen interations is then outputted to environment.csv.
+This assignment is designed to intoduce the Python programming language by building a model through various weeks of development and increasing complexity. The idea is that there is a user interface created with TKinter, an imported environment (environment.csv) which is displayed using matplotlib and then animated showing the agents (a simple way to imagine them is sheep) moveing and eating/nibbling their way across the environment. Reproduction is possible by agents. The final environment after the number of chosen interations is then outputted to environment.csv and a pdf saved of the final plot.
 
 The program is run through command prompt (PC) or terminal (Mac). It should be noted this program has been developed and tested on a Mac through terminal, hence instructions will primarily focus on Mac use but with additional details on Windows use, although there may be some unexpected differences.
 
@@ -17,7 +17,7 @@ in.csv - The environment input with values from 0 to 255
 
 # RUNNING THE PROGRAM & EXPECTATIONS
 
-1) Download all code from the Assignment 1 GitHub repository. Code > Download Zip > Extract All
+1) Download all code from the Assignment 1 GitHub repository then extract. Code > Download Zip > Extract All
 2) Open terminal with the extracted folder as directory (Mac > 'New Terminal at Folder' ¦ Windows > Type cmd then enter into address bar while in the chosen folder)
 3) Type 'python Practical.py' followed by: Number of iterations, number of agents, neighbourhood size (the maximum distance for communication between agents to occur) (With a space at the beginning and in between each) e.g. python Practical.py 10 20 10 
 4) The variables will be displayed in the command line
@@ -26,6 +26,11 @@ in.csv - The environment input with values from 0 to 255
 7) The iteration number will be printed in the command prompt
 8) If conditions are met for new agents, it will state when and where they are created and display as white dots
 9) If stopping conditions are met, it will state this and the program will stop running
+10) When the program has finished running, the final plot will be output as a PDF into the original folder where extraction occurred in step 1
+
+# TESTING
+
+Testing was conducted throughout using PyCharm CE's debugger, variable watcher and simple print statements. Some statements remain in the code commented out but others remain for user guidance such as the iteration step, variables inputted, when functions are called and the end of the program.
 
 # KNOWN ISSUES/FURTHER DEVELOPMENT
 
