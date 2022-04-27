@@ -94,7 +94,8 @@ f.close()  # Close file
 num_of_iterations = int(sys.argv[1])  # First number input it the iterations ([0] is the file name)
 num_agents = int(sys.argv[2])  # Second number is the number of agents
 neighbourhood = int(sys.argv[3])  # Third number is the neighbourhood size
-print("Variables: " + str(sys.argv))
+print("Variables: " + "Iterations: " + str(sys.argv[1]) + " Number of Agents (Sheep): " + str(sys.argv[2])
+      + " Neighbourhood Size: " + str(sys.argv[3]))
 
 # Below was used during testing to determine variable values
 # num_of_iterations = 20
@@ -109,7 +110,8 @@ newagents = []  # A list for created agents
 for i in range(num_agents):  # Loop until reaches number of agents. Appends to list as a list as y then x
     y = int(td_ys[i].text)
     x = int(td_xs[i].text)
-    agents.append(agentframework.Agent(environment, agents, y, x))  # Assigns random agents determined in the class to the agents list
+    agents.append(agentframework.Agent(environment, agents, y, x))
+    # Assigns random agents determined in the class to the agents list
     # ^^ Also passes environment list into agent's constructor
     # ^^ Now passes in the list of agents - to get their x you use agents[3].x (if you want the x of agent 3)
 
@@ -162,7 +164,7 @@ def Update(frame_number):
 
 # matplotlib.pyplot.show() - No longer required as canvas is used
 
-#  KNOWN ISSUE: Generator function can only be used once, hence disability of menu option
+#  KNOWN ISSUE: Generator function can only be used once, hence disability of menu option. Provided code:
 def gen_function(b=[0]):
     print("Open gen_function")
 
