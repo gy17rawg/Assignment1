@@ -19,7 +19,7 @@ in.csv - The environment input with values from 0 to 255
 
 1) Download all code from the Assignment 1 GitHub repository. Code > Download Zip > Extract All
 2) Open terminal with the extracted folder as directory (Mac > 'New Terminal at Folder' ¦ Windows > Type cmd then enter into address bar while in the chosen folder)
-3) Type 'python Practical.py' followed by: Number of iterations, number of agents, neighbourhood size (With a space at the beginning and in between each)
+3) Type 'python Practical.py' followed by: Number of iterations, number of agents, neighbourhood size (the maximum distance for communication between agents to occur) (With a space at the beginning and in between each) e.g. python Practical.py 10 20 10 
 4) The variables will be displayed in the command line
 5) The model window will open, select Model > Run Model
 6) The model will run (it will say so in command prompt) and show the animation by iterating the chosen number of times (Starting at 0)
