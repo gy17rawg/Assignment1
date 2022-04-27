@@ -4,7 +4,7 @@
 Created on Wed Feb  9 15:45:03 2022
 
 '''This framework enables the creation of agents and stores their attributes. It also contains the functions
-for eating the environment, moving and interacting'''
+for eating the environment, moving and interacting. Version 1.0. MIT Licenced'''
 
 @author: rorygrindey
 """
@@ -13,8 +13,9 @@ import random
 
 # Basic form of a class and constructor
 
+
 class Agent():
-    def __init__(self, environment, agents, y, x):  # Creation of agents, bringing in environment list
+    def __init__(self, environment, agents, y, x):  # Creation of agents, bringing in environment and agent list and x y coordinates
 
         if x is None:  # Only assigns a random x if the agent hasn't been assigned one from the online list (if there are more agents than values)
             self.x = random.randint(0, 299)  # Assigns a random x between 0 and 299 (This uses the entire environment)
@@ -37,7 +38,9 @@ class Agent():
         self.store = 0  # All start with a store of 0
 
     def move(self):
-        # This function moves the agents/sheep by 1 in a direction dependant on a random number
+
+        # This function moves the agents/sheep by 1 in a direction dependent on a random number
+
         if random.random() < 0.5:
 
             self.y = (self.y + 1) % 300  # remainder means they move over the plot like a donut (300 as this is the size of the environment)
@@ -57,14 +60,14 @@ class Agent():
         # matplotlib.pyplot.scatter(self.x,self.y)
         # print(self.x,self.y)
 
-    def eat(self):  # eat what is left of the environment in each move step (sheep)
+    def eat(self):  # eat the environment in each move step (sheep)
 
-        # Eats what is left of the environment if less than 10
+        # Eats what is left of the environment if it is less than 10
         if self.environment[self.y][self.x] < 10:
             self.store += self.environment[self.y][self.x]
             self.environment[self.y][self.x] = 0
 
-        # If environment value is greater than 10, it only eats 10
+        # If environment value is greater than 10, agent only eats 10
         if self.environment[self.y][self.x] > 10:  # eats environment at its position
             self.environment[self.y][self.x] -= 10
             self.store += 10
@@ -74,7 +77,7 @@ class Agent():
             self.environment[self.y][self.x] += self.store
             self.store = 0
 
-# Method/function to search for close neighbours and share resources with them. Should work out distance to other agents
+# Method/function to search for close neighbours and share resources with them. Also calls function to work out distance to other agents
 
     def share_with_neighbours(self, neighbourhood):
         for agent in self.agents:
