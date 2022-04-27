@@ -87,7 +87,7 @@ class Agent():
                 ave = sum / 2  # Get average of stores
                 self.store = ave  # Commit the average of the store to each agent
                 agent.store = ave
-                
+
                 if ave > 50 and distance < 10:
                     agents.append(agentframework.Agent(environment, agents, y, x))
                     print("New agent created")
