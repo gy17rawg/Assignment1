@@ -87,11 +87,15 @@ class Agent():
                 ave = sum / 2  # Get average of stores
                 self.store = ave  # Commit the average of the store to each agent
                 agent.store = ave
-
-                if ave > 50 and distance < 10:
-                    agents.append(agentframework.Agent(environment, agents, y, x))
-                    print("New agent created")
                 # print("Sharing | Distance: " + str(distance) + " Average: " + str(ave))
+
+                # Conditions for creating a new agent are a storage over 75 and a distance to the other agent below 10
+                # Also resets store of each to 0
+
+                if ave > 75 and distance < 10:
+                    self.store = 0
+                    agent.store = 0
+                    return True
 
     def distance_between(self, agent):
         return (((self.x - agent.x) ** 2) + ((self.y - agent.y) ** 2)) ** 0.5  # Get euclidean distance between agents
