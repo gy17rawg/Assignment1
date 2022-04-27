@@ -22,7 +22,9 @@ in.csv - The environment input with values from 0 to 255
 3) Type 'python Practical.py' followed by: Number of iterations, number of agents, neighbourhood size (With a space at the beginning and in between each)
 4) The variables will be displayed in the command line
 5) The model window will open, select Model > Run Model
-6) The model will run and show the animation by iterating the chosen number of times (Starting at 0)
+6) The model will run (it will say so in command prompt) and show the animation by iterating the chosen number of times (Starting at 0)
+7) The iteration number will be printed in the command prompt
+8) It will say when the model has finished
 
 # ISSUES/FURTHER DEVELOPMENT
 
