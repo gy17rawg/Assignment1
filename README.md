@@ -24,11 +24,12 @@ in.csv - The environment input with values from 0 to 255
 5) The model window will open, select Model > Run Model
 6) The model will run (it will say so in command prompt) and show the animation by iterating the chosen number of times (Starting at 0)
 7) The iteration number will be printed in the command prompt
-8) It will say when the model has finished
+8) If conditions are met for new agents, it will state when and where they are created and display as white dots
+9) If stopping conditions are met, it will state this and the program will stop running
 
-# ISSUES/FURTHER DEVELOPMENT
+# KNOWN ISSUES/FURTHER DEVELOPMENT
 
-- The update function is called right at the beginning so prints with iteration 0 twice
+- The model can only be run once before having to be closed and reopened due to the generator function being exhausted (Hence disabling of Run Model on menu)
 - There is no use for the environment output - it could easily be used as an input in further models
 
 # WEBSITE
